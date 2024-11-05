@@ -11,5 +11,6 @@ import { DatabaseModule } from 'src/common/database/database.module';
     DatabaseModule.forFeature([{ name: User.name, schema: UserSchema }]),
   ],
   providers: [UsersResolver, UsersService, UsersRepository],
+  exports: [UsersService],
 })
 export class UsersModule {}
