@@ -3,8 +3,8 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
 import { AbstractEntity } from 'src/common/database/abstract.entity';
 
-@ObjectType()
 @Schema()
+@ObjectType()
 export class Chat extends AbstractEntity {
   @Field()
   @Prop()

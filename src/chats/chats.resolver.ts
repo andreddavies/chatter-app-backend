@@ -1,4 +1,3 @@
-import { UseGuards } from '@nestjs/common';
 import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
 
 import { Chat } from './entities/chat.entity';
@@ -12,7 +11,6 @@ import { ITokenPayload } from 'src/auth/token-payload.interface';
 export class ChatsResolver {
   constructor(private readonly chatsService: ChatsService) {}
 
-  @UseGuards(() => Chat)
   @Mutation(() => Chat)
   createChat(
     @Args('createChatInput') createChatInput: CreateChatInput,
