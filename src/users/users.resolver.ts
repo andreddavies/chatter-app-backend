@@ -48,7 +48,7 @@ export class UsersResolver {
 
   @UseGuards(GqlAuthGuard)
   @Query(() => User, { name: 'me' })
-  getCurrentLoggedUser(@CurrentUser() user: ITokenPayload) {
+  getMe(@CurrentUser() user: ITokenPayload) {
     return user;
   }
 }
